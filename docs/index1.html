@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대치프라임 채원T 튜터링 완벽 가이드</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 스타일: 모바일 우선 */
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #FDF2F8 0%, #F3E8FF 50%, #EEF2FF 100%);
+            font-family: 'Noto Sans KR', sans-serif;
+            -webkit-print-color-adjust: exact;
+            color-adjust: exact;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #FEFCFF 0%, #FDF7FF 100%);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        .teacher-label {
+            display: block;
+            background: linear-gradient(135deg, #F472B6 0%, #C084FC 100%);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0 auto 25px auto;
+            text-align: center;
+            width: fit-content;
+            box-shadow: 0 4px 20px rgba(244, 114, 182, 0.3);
+        }
+        
+        h1 {
+            color: #BE185D;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            line-height: 1.3;
+            background: linear-gradient(135deg, #EC4899 0%, #A855F7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            padding: 20px 0;
+            border: 3px solid #F8BBD9;
+            border-radius: 15px;
+            background-color: rgba(253, 242, 248, 0.5);
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #A21CAF;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            padding: 15px;
+            background: linear-gradient(135deg, #FCE7F3 0%, #F3E8FF 100%);
+            border-radius: 10px;
+            border: 2px dashed #F472B6;
+        }
+        
+        .floating-text {
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+            background: linear-gradient(45deg, #F472B6, #E879F9, #A855F7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: bold;
+        }
+        
+        .floating-text:nth-child(1) { animation-delay: 0s; }
+        .floating-text:nth-child(2) { animation-delay: 0.3s; }
+        .floating-text:nth-child(3) { animation-delay: 0.6s; }
+        .floating-text:nth-child(4) { animation-delay: 0.9s; }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            25% { transform: translateY(-8px) rotate(1deg); }
+            50% { transform: translateY(-15px) rotate(-1deg); }
+            75% { transform: translateY(-8px) rotate(0.5deg); }
+        }
+        
+        .sparkle {
+            display: inline-block;
+            color: #FFD700;
+            animation: sparkle 2s ease-in-out infinite;
+            margin: 0 5px;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+        
+        h2 {
+            color: #EC4899;
+            border-bottom: 3px solid #F8BBD9;
+            padding-bottom: 10px;
+            font-size: 22px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        
+        /* 중요 공지 박스들 */
+        .important-notice {
+            background: linear-gradient(135deg, #FCE7F3 0%, #F3E8FF 100%);
+            border: 2px dashed #F472B6;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(244, 114, 182, 0.15);
+        }
+        
+        .important-notice h3 {
+            margin-top: 0;
+            color: #EC4899;
+            font-size: 18px;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #FDF2F8 0%, #FCE7F3 100%);
+            border: 2px solid #F472B6;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(244, 114, 182, 0.15);
+        }
+        
+        .notice-box {
+            background: linear-gradient(135deg, #F3E8FF 0%, #E9D5FF 100%);
+            border: 2px solid #C084FC;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(192, 132, 252, 0.15);
+        }
+        
+        .time-box {
+            background: linear-gradient(135deg, #FCE7F3 0%, #F3E8FF 100%);
+            border: 2px solid #E879F9;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+            color: #EC4899;
+            font-size: 16px;
+            box-shadow: 0 4px 20px rgba(232, 121, 249, 0.2);
+        }
+        
+        /* 업그레이드된 단어장 테이블 스타일 */
+        .vocab-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            font-size: 14px;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(168, 85, 247, 0.15);
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.9);
+        }
+        
+        .vocab-table thead {
+            background: linear-gradient(135deg, 
+                #F472B6 0%, 
+                #E879F9 25%, 
+                #C084FC 50%, 
+                #A855F7 75%, 
+                #9333EA 100%);
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .vocab-table th {
+            padding: 15px 8px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            position: relative;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+        }
+        
+        .vocab-table th:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 20%;
+            height: 60%;
+            width: 1px;
+            background: linear-gradient(to bottom, 
+                transparent, 
+                rgba(255,255,255,0.3), 
+                transparent);
+        }
+        
+        .vocab-table td {
+            padding: 14px 8px;
+            border-bottom: 1px solid rgba(244, 114, 182, 0.1);
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        /* 각 행마다 다른 그라데이션 */
+        .vocab-table tbody tr:nth-child(1) {
+            background: linear-gradient(135deg, 
+                rgba(254, 215, 239, 0.4) 0%, 
+                rgba(251, 207, 232, 0.3) 100%);
+        }
+        
+        .vocab-table tbody tr:nth-child(2) {
+            background: linear-gradient(135deg, 
+                rgba(243, 232, 255, 0.4) 0%, 
+                rgba(233, 213, 255, 0.3) 100%);
+        }
+        
+        .vocab-table tbody tr:nth-child(3) {
+            background: linear-gradient(135deg, 
+                rgba(254, 226, 217, 0.4) 0%, 
+                rgba(254, 215, 239, 0.3) 100%);
+        }
+        
+        .vocab-table tbody tr:nth-child(4) {
+            background: linear-gradient(135deg, 
+                rgba(239, 246, 255, 0.4) 0%, 
+                rgba(219, 234, 254, 0.3) 100%);
+        }
+        
+        .vocab-table tbody tr:nth-child(5) {
+            background: linear-gradient(135deg, 
+                rgba(254, 243, 199, 0.4) 0%, 
+                rgba(253, 230, 138, 0.3) 100%);
+        }
+        
+        .vocab-table tbody tr:nth-child(6) {
+            background: linear-gradient(135deg, 
+                rgba(220, 252, 231, 0.4) 0%, 
+                rgba(187, 247, 208, 0.3) 100%);
+        }
+        
+        .vocab-table tbody tr:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 20px rgba(168, 85, 247, 0.2);
+            background: linear-gradient(135deg, 
+                rgba(244, 114, 182, 0.15) 0%, 
+                rgba(168, 85, 247, 0.15) 100%) !important;
+        }
+        
+        .vocab-table tbody tr td:first-child {
+            font-weight: 700;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                rgba(244, 114, 182, 0.05) 100%);
+            color: #EC4899;
+            text-shadow: 0 1px 2px rgba(236, 72, 153, 0.1);
+        }
+        
+        .table-caption {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 10px;
+            font-weight: bold;
+            background: linear-gradient(135deg, 
+                rgba(253, 242, 248, 0.8) 0%, 
+                rgba(243, 232, 255, 0.8) 100%);
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .table-caption::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(135deg, #F472B6, #E879F9, #A855F7);
+            border-radius: 10px;
+            z-index: -1;
+        }
+        
+        .table-caption::after {
+            content: '✨';
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            animation: sparkle 2s ease-in-out infinite;
+        }
+        
+        /* 반별/과정별 카드 그리드 */
+        .class-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .class-card {
+            background: linear-gradient(135deg, #FFFBFF 0%, #FEF7FF 100%);
+            border-left: 5px solid #F472B6;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(244, 114, 182, 0.1);
+            font-size: 15px;
+            line-height: 1.7;
+            border: 1px solid #FECACA;
+        }
+        
+        .class-card .class-name {
+            font-weight: bold;
+            color: #EC4899;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .process-card {
+            background: linear-gradient(135deg, #FFFBFF 0%, #FEF7FF 100%);
+            border-left: 5px solid #E879F9;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(232, 121, 249, 0.1);
+            font-size: 15px;
+            line-height: 1.7;
+            border: 1px solid #F8BBD9;
+        }
+        
+        .step-number {
+            background: linear-gradient(135deg, #F472B6 0%, #E879F9 100%);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 10px rgba(244, 114, 182, 0.3);
+        }
+        
+        /* 규정 박스 */
+        .rules-box {
+            background: linear-gradient(135deg, #FCE7F3 0%, #F3E8FF 100%);
+            border: 2px solid #F472B6;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(244, 114, 182, 0.15);
+        }
+        
+        .rules-box ul {
+            margin: 0;
+            padding-left: 20px;
+            color: #EC4899;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+        
+        .rules-box li {
+            margin-bottom: 12px;
+        }
+        
+        /* 리스트 스타일 */
+        ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        
+        li strong {
+            color: #EC4899;
+        }
+        
+        /* 강조 텍스트 */
+        .highlight-text {
+            background: linear-gradient(135deg, #FCE7F3 0%, #F3E8FF 100%);
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-weight: bold;
+            color: #EC4899;
+            border: 1px solid #F8BBD9;
+        }
+        
+        /* 마지막 강조 박스 */
+        .final-shoutout {
+            background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+            border: 2px dashed #F59E0B;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.2);
+        }
+        
+        .final-shoutout p {
+            margin: 0;
+            font-size: 16px;
+            font-weight: bold;
+            color: #92400E;
+        }
+        
+        .signature {
+            text-align: center;
+            font-style: italic;
+            color: #EC4899;
+            margin-top: 40px;
+            font-weight: bold;
+            font-size: 18px;
+            background: linear-gradient(135deg, #EC4899 0%, #A855F7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* 모바일용 반응형 테이블 스타일 (767px 이하) */
+        @media (max-width: 767px) {
+            .vocab-table {
+                background: transparent;
+                box-shadow: none;
+            }
+            
+            .vocab-table thead {
+                display: none;
+            }
+            
+            .vocab-table tbody {
+                display: block;
+            }
+            
+            .vocab-table tr {
+                display: block;
+                margin-bottom: 20px;
+                border-radius: 15px;
+                overflow: hidden;
+                box-shadow: 0 6px 25px rgba(168, 85, 247, 0.15);
+                background: white !important;
+                position: relative;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            
+            .vocab-table tr:hover {
+                transform: translateY(-5px) !important;
+                box-shadow: 0 10px 35px rgba(168, 85, 247, 0.25);
+            }
+            
+            /* 각 행의 헤더 (단어장 이름) */
+            .vocab-table td:first-child {
+                display: block;
+                background: linear-gradient(135deg, #F472B6 0%, #E879F9 50%, #A855F7 100%);
+                color: white !important;
+                font-weight: 700;
+                font-size: 16px;
+                padding: 15px;
+                text-align: center;
+                margin-bottom: 0;
+                border-radius: 0;
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                letter-spacing: 0.5px;
+            }
+            
+            .vocab-table td:not(:first-child) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 12px 20px;
+                text-align: right;
+                border: none;
+                border-bottom: 1px solid rgba(244, 114, 182, 0.1);
+                background: linear-gradient(90deg, 
+                    rgba(255,255,255,0) 0%, 
+                    rgba(243, 232, 255, 0.1) 100%);
+                transition: background 0.3s ease;
+            }
+            
+            .vocab-table td:not(:first-child):hover {
+                background: linear-gradient(90deg, 
+                    rgba(244, 114, 182, 0.05) 0%, 
+                    rgba(243, 232, 255, 0.2) 100%);
+            }
+            
+            .vocab-table td:last-child {
+                border-bottom: none;
+                border-radius: 0 0 15px 15px;
+            }
+            
+            .vocab-table td::before {
+                content: attr(data-label);
+                font-weight: 600;
+                text-align: left;
+                color: #EC4899;
+                flex-shrink: 0;
+                margin-right: 10px;
+                background: linear-gradient(135deg, #FCE7F3 0%, #F3E8FF 100%);
+                padding: 4px 10px;
+                border-radius: 20px;
+                font-size: 13px;
+            }
+            
+            .vocab-table td:first-child::before {
+                display: none;
+            }
+            
+            /* 모바일에서 각 카드에 그라데이션 보더 효과 */
+            .vocab-table tr::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 3px;
+                background: linear-gradient(90deg, 
+                    #F472B6 0%, 
+                    #E879F9 33%, 
+                    #A855F7 66%, 
+                    #F472B6 100%);
+                background-size: 200% 100%;
+                animation: gradientMove 3s linear infinite;
+            }
+            
+            @keyframes gradientMove {
+                0% { background-position: 0% 0%; }
+                100% { background-position: 200% 0%; }
+            }
+        }
+        
+        /* 태블릿 및 데스크탑용 스타일 (768px 이상) */
+        @media (min-width: 768px) {
+            body {
+                padding: 20px;
+            }
+            
+            .container {
+                padding: 30px 40px;
+                border-radius: 15px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            }
+            
+            h1 {
+                font-size: 32px;
+            }
+            
+            .subtitle {
+                font-size: 18px;
+                padding: 20px;
+            }
+            
+            .class-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="teacher-label">대치프라임 채원T</div>
+        
+        <h1>✨ 튜터링 완벽 가이드 ✨</h1>
+        
+        <div class="subtitle">
+            <span class="sparkle">🌟</span>
+            <span class="floating-text">체계적이고</span>
+            <span class="floating-text">효율적인</span>
+            <span class="floating-text">단어학습</span>
+            <span class="floating-text">시스템!</span>
+            <span class="sparkle">✨</span>
+        </div>
+
+        <div class="important-notice">
+            <h3 style="color: #EC4899;">📌 가장 중요해요!</h3>
+            <p>
+                <strong style="color: #EC4899; font-size: 17px;">집에서 미리 암기 + 학원에서 15분 복습 + 테스트</strong><br>
+                <span style="color: #A855F7; font-weight: 600; font-size: 16px;">반별 & 회독별로 시험 기준이 달라져요! 🎯</span>
+            </p>
+        </div>
+
+        <h2>📚 단어장별 학습량 & 커트라인</h2>
+        
+        <table class="vocab-table">
+            <thead>
+                <tr>
+                    <th>단어장</th>
+                    <th>일일 학습량</th>
+                    <th>일일 커트라인</th>
+                    <th>주간 커트라인</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="단어장"><strong>뜯어먹는 1200</strong></td>
+                    <td data-label="일일 학습량">Day 2개 (40개)</td>
+                    <td data-label="일일 커트라인">1회독: -5 / 2~3회독: -7</td>
+                    <td data-label="주간 커트라인">-7/80</td>
+                </tr>
+                <tr>
+                    <td data-label="단어장"><strong>능률 보카 실력</strong></td>
+                    <td data-label="일일 학습량">Day 2개 (40개)</td>
+                    <td data-label="일일 커트라인">1회독: -5 / 2~3회독: -7</td>
+                    <td data-label="주간 커트라인">-7/80</td>
+                </tr>
+                <tr>
+                    <td data-label="단어장"><strong>뜯어먹는 1800</strong></td>
+                    <td data-label="일일 학습량">Day 2개 (60개)</td>
+                    <td data-label="일일 커트라인">1회독: -5 / 2~3회독: -7</td>
+                    <td data-label="주간 커트라인">-7/120</td>
+                </tr>
+                <tr>
+                    <td data-label="단어장"><strong>뜯먹 중학 영숙어 1000</strong></td>
+                    <td data-label="일일 학습량">Day 2개 (40개)</td>
+                    <td data-label="일일 커트라인">1회독: -5 / 2~3회독: -7</td>
+                    <td data-label="주간 커트라인">-7/80</td>
+                </tr>
+                <tr>
+                    <td data-label="단어장"><strong>뜯먹 수능 1등급 (고등)</strong></td>
+                    <td data-label="일일 학습량">Day 2개 (60개)</td>
+                    <td data-label="일일 커트라인">1회독: -5 / 2~3회독: -7</td>
+                    <td data-label="주간 커트라인">1회독: -7 / 2~3회독: -10</td>
+                </tr>
+                <tr>
+                    <td data-label="단어장"><strong>능률 고교기본/필수 (고등)</strong></td>
+                    <td data-label="일일 학습량">Day 2개 (60개)</td>
+                    <td data-label="일일 커트라인">1회독: -5 / 2~3회독: -7</td>
+                    <td data-label="주간 커트라인">1회독: -7 / 2~3회독: -10</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="table-caption" style="color: #EC4899; font-weight: bold;">*커트라인: -숫자까지 통과!</p>
+
+        <h2>🎯 반별 단어 시험 유형</h2>
+        <div class="class-grid">
+            <div class="class-card">
+                <div class="class-name">중1B1 / 중1B4 반</div>
+                <p>📖 <strong>교재:</strong> 뜯어먹는 1200 (1회독)</p>
+                <p>📝 <strong>시험:</strong> 한글 뜻 1개만 쓰면 통과!</p>
+            </div>
+            <div class="class-card">
+                <div class="class-name">중1A1 반</div>
+                <p>📖 <strong>교재:</strong> 뜯어먹는 1800 (1회독)</p>
+                <p>📝 <strong>시험:</strong> 한글 뜻 1개만 쓰면 통과!</p>
+            </div>
+            <div class="class-card">
+                <div class="class-name">중2A1 반</div>
+                <p>📖 <strong>교재:</strong> 능률 보카 실력 (2회독)</p>
+                <p>📝 <strong>일일:</strong> 한글 뜻 20개 + 스펠링(힌트 O) 20개</p>
+                <p>📝 <strong>주간:</strong> 한글 뜻 40개 + 스펠링(힌트 O) 40개</p>
+            </div>
+            <div class="class-card">
+                <div class="class-name">중3B1 반</div>
+                <p>📖 <strong>교재:</strong> 뜯어먹는 1800 (1회독)</p>
+                <p>📝 <strong>일일:</strong> 모든 뜻 + 스펠링 + 문장 빈칸 각 20개</p>
+                <p>📝 <strong>주간:</strong> 모든 뜻 + 스펠링 + 문장 빈칸 각 40개</p>
+            </div>
+        </div>
+
+        <h2>📖 집에서 하는 단어 암기법</h2>
+        
+        <div class="class-grid">
+            <div class="process-card">
+                <div class="step-number">1</div>
+                <strong>🎧 QR 듣기 + 발음 쓰기</strong>
+                <p>본 단어장 → QR 듣기 → 발음 표기<br>
+                <em>예) student 스튜던트 학생</em></p>
+            </div>
+            
+            <div class="process-card">
+                <div class="step-number">2</div>
+                <strong>👀 빈칸 암기법</strong>
+                <p>빈칸 채우기 ❌<br>
+                눈으로 보며 단어 떠올리기 ⭕<br>
+                (뜯어먹는 단어장 활용)</p>
+            </div>
+            
+            <div class="process-card">
+                <div class="step-number">3</div>
+                <strong>📖 덩어리 암기법</strong>
+                <p><strong>뜯어먹는 단어장</strong> → 덩어리 암기<br>
+                <strong>기타 단어장</strong> → 예문 덩어리 암기</p>
+            </div>
+            
+            <div class="process-card">
+                <div class="step-number">4</div>
+                <strong>✅ 즐거운 테스트</strong>
+                <p>각 챕터별 테스트 → <span class="highlight-text">필수 완료</span><br>
+                복기용 최고! 💯</p>
+            </div>
+        </div>
+
+        <h2>⏰ 튜터링 진행 과정</h2>
+
+        <div class="class-grid">
+            <div class="process-card">
+                <div class="step-number">1</div>
+                <strong>🕐 복습 15분</strong>
+                <p>노트에 쓰면서 암기<br>→ <span style="color: #000000;">양은 자유!</span></p>
+            </div>
+            
+            <div class="process-card">
+                <div class="step-number">2</div>
+                <strong>📋 튜터T 검사</strong>
+                <p>발음숙제 + 복습노트 확인<br>→ <span style="color: #000000;">시험지 배부</span></p>
+            </div>
+            
+            <div class="process-card">
+                <div class="step-number">3</div>
+                <strong>📝 단어 테스트</strong>
+                <p>반별로 다른 시험<br>→ <span style="color: #000000;">위 표 참고!</span></p>
+            </div>
+            
+            <div class="process-card">
+                <div class="step-number">4</div>
+                <strong>❌ 재시험 규정</strong>
+                <p>미통과 시 → 재시험 1번<br>또 미통과 시 → <span style="color: #000000;">틀린 단어 2번씩 쓰기</span></p>
+            </div>
+            
+            <div class="process-card">
+                <div class="step-number">5</div>
+                <strong>🔄 재시 대상자</strong>
+                <p>50분 안에 재시험<br>시간 부족하면 → <span style="color: #000000;">튜터T와 상의</span></p>
+            </div>
+            
+            <div class="process-card">
+                <div class="step-number">6</div>
+                <strong>📚 여유 시간</strong>
+                <p>영어 과제만 OK!<br>→ <span style="color: #000000;">다른 과목 ❌</span> / 듣기는 가능</p>
+            </div>
+        </div>
+
+        <div class="time-box">
+            ⏱️ <strong style="color: #EC4899;">튜터링 시간 50분 엄수!</strong><br>
+            <span style="color: #000000;">다음 학생을 위해 시간 준수</span><br>
+            → <span style="color: #000000; font-weight: bold;">튜터T께 인사 후 이동</span>
+        </div>
+
+        <h2>🎧 듣기 숙제 시스템</h2>
+
+        <div class="class-grid">
+            <div class="process-card">
+                <div class="step-number">🏠</div>
+                <strong>집에서 셀프 테스트</strong>
+                <p>듣기 → <span class="highlight-text">집에서 해결</span><br>
+                (튜터링 시 듣기책 지참 ❌)</p>
+            </div>
+            
+            <div class="process-card">
+                <div class="step-number">📱</div>
+                <strong>답지 업로드</strong>
+                <p>본수업 당일 → 튜터T가<br>
+                <span class="highlight-text">각반 단톡 업로드</span></p>
+            </div>
+            
+            <div class="process-card">
+                <div class="step-number">📤</div>
+                <strong>숙제 제출</strong>
+                <p>셀프 채점 완료 → <span class="highlight-text">다음날 밤 12시</span><br>
+                본수업 숙제와 함께 업로드<br>
+                ⚠️ 미제출 시 숙제 ❌</p>
+            </div>
+            
+            <div class="process-card">
+                <div class="step-number">💪</div>
+                <strong>성실한 자세</strong>
+                <p>대충하기 ❌<br>
+                <span class="highlight-text">본인 실력 향상이 목표!</span></p>
+            </div>
+        </div>
+
+        <h2>👀 채원T의 깜짝 방문 시스템</h2>
+        <div class="rules-box">
+            <ul style="font-size: 17px; font-weight: 600;">
+                <li>
+                    <strong style="color: #EC4899; font-size: 18px;">🚶‍♀️ 언제든 깜짝 방문:</strong> 채원T가 예고 없이 튜터링실에 쏘옥~ 들어올 수 있어요!
+                </li>
+                <li>
+                    <strong style="color: #EC4899; font-size: 18px;">🏆 열심히 하면:</strong> <span style="color: #000000; font-weight: bold;">칭찬은 덤!</span> 👏✨
+                </li>
+            </ul>
+        </div>
