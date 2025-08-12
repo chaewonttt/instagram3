@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영어 수업 안내서</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 스타일: 모바일 우선 */
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 50%, #E6F3FF 100%);
+            font-family: 'Noto Sans KR', sans-serif;
+            -webkit-print-color-adjust: exact;
+            color-adjust: exact;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #FEFEFF 0%, #F8FAFF 100%);
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        .teacher-label {
+            display: block;
+            background: linear-gradient(135deg, #3B82F6 0%, #6366F1 100%);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0 auto 25px auto;
+            text-align: center;
+            width: fit-content;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #1D4ED8;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            padding: 15px;
+            background: linear-gradient(135deg, #DBEAFE 0%, #E0E7FF 100%);
+            border-radius: 10px;
+            border: 2px dashed #60A5FA;
+        }
+        
+        .floating-text {
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+            background: linear-gradient(45deg, #3B82F6, #6366F1, #8B5CF6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: bold;
+        }
+        
+        .floating-text:nth-child(1) { animation-delay: 0s; }
+        .floating-text:nth-child(2) { animation-delay: 0.3s; }
+        .floating-text:nth-child(3) { animation-delay: 0.6s; }
+        .floating-text:nth-child(4) { animation-delay: 0.9s; }
+        .floating-text:nth-child(5) { animation-delay: 1.2s; }
+        .floating-text:nth-child(6) { animation-delay: 1.5s; }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            25% { transform: translateY(-8px) rotate(1deg); }
+            50% { transform: translateY(-15px) rotate(-1deg); }
+            75% { transform: translateY(-8px) rotate(0.5deg); }
+        }
+        
+        .sparkle {
+            display: inline-block;
+            color: #FFD700;
+            animation: sparkle 2s ease-in-out infinite;
+            margin: 0 5px;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+        
+        h1 {
+            color: #1E40AF;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            line-height: 1.3;
+            background: linear-gradient(135deg, #3B82F6 0%, #6366F1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            padding: 20px 0;
+            border: 3px solid #93C5FD;
+            border-radius: 15px;
+            background-color: rgba(219, 234, 254, 0.5);
+        }
+        
+        h2 {
+            color: #2563EB;
+            border-bottom: 3px solid #93C5FD;
+            padding-bottom: 10px;
+            font-size: 22px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        /* 중요 공지 박스들 */
+        .important-notice {
+            background: linear-gradient(135deg, #DBEAFE 0%, #E0E7FF 100%);
+            border: 2px dashed #60A5FA;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.15);
+        }
+        
+        .important-notice h3 {
+            margin-top: 0;
+            color: #2563EB;
+            font-size: 18px;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #F0F9FF 0%, #DBEAFE 100%);
+            border: 2px solid #60A5FA;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(96, 165, 250, 0.15);
+            text-align: center;
+        }
+        
+        .notice-box {
+            background: linear-gradient(135deg, #E0E7FF 0%, #C7D2FE 100%);
+            border: 2px solid #818CF8;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(129, 140, 248, 0.15);
+            text-align: center;
+        }
+        
+        .time-box {
+            background: linear-gradient(135deg, #DBEAFE 0%, #E0E7FF 100%);
+            border: 2px solid #7C3AED;
+            color: #2563EB;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+            box-shadow: 0 4px 20px rgba(124, 58, 237, 0.2);
+        }
+
+        /* 학습 과정 카드들 */
+        .process-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .process-card {
+            background: linear-gradient(135deg, #FFFBFF 0%, #FEF7FF 100%);
+            border-left: 5px solid #F472B6;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(244, 114, 182, 0.1);
+            font-size: 15px;
+            line-height: 1.7;
+            text-align: left;
+            border: 1px solid #FECACA;
+        }
+        
+        .process-card .title-row {
+            text-align: left;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .process-card .step-number {
+            color: #EC4899;
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 8px;
+            vertical-align: middle;
+            display: inline;
+        }
+        
+        .process-card strong {
+            display: inline;
+            vertical-align: middle;
+            color: #EC4899;
+        }
+        
+        .process-card p {
+            text-align: left;
+            margin: 8px 0;
+        }
+
+        /* 리스트 스타일 */
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 20px;
+            text-align: left;
+            display: inline-block;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        
+        li strong {
+            color: #2563EB;
+        }
+
+        /* 강조 텍스트 */
+        .highlight-text {
+            background: linear-gradient(135deg, #DBEAFE 0%, #E0E7FF 100%);
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-weight: bold;
+            color: #2563EB;
+            border: 1px solid #93C5FD;
+        }
+
+        /* 숙제량 카드 */
+        .homework-card {
+            background: linear-gradient(135deg, #F8FAFF 0%, #F1F5F9 100%);
+            border: 2px solid #60A5FA;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(96, 165, 250, 0.1);
+            text-align: center;
+        }
+
+        .homework-card h3 {
+            color: #2563EB;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        /* 수업 흐름 카드 */
+        .flow-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .flow-card {
+            background: linear-gradient(135deg, #EFF6FF 0%, #E0F2FE 100%);
+            border: 2px solid #7C3AED;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(124, 58, 237, 0.1);
+            text-align: center;
+        }
+
+        .flow-card .step-title {
+            background: linear-gradient(135deg, #3B82F6 0%, #6366F1 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 10px rgba(59, 130, 246, 0.3);
+        }
+
+        /* 마지막 서명 */
+        .signature {
+            text-align: center;
+            font-style: italic;
+            color: #2563EB;
+            margin-top: 40px;
+            font-weight: bold;
+            font-size: 18px;
+            background: linear-gradient(135deg, #3B82F6 0%, #6366F1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* 태블릿 및 데스크탑용 스타일 (768px 이상) */
+        @media (min-width: 768px) {
+            body {
+                padding: 20px;
+            }
+            .container {
+                padding: 30px 40px;
+                border-radius: 15px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            }
+            h1 {
+                font-size: 32px;
+            }
+            .subtitle {
+                font-size: 18px;
+                padding: 20px;
+            }
+            .process-grid, .flow-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="teacher-label">대치프라임 채원T</div>
+        
+        <div class="subtitle">
+            <span class="sparkle">✨</span>
+            <span class="floating-text">체계적이고</span> 
+            <span class="floating-text">재미있는</span>
+            <span class="floating-text">영어</span> 
+            <span class="floating-text">수업</span>
+            <span class="floating-text">안내!</span>
+            <span class="sparkle">🌟</span>
+        </div>
+        <h1>📚 영어 수업 안내서 📚</h1>
+
+        <div class="important-notice">
+            <h3>📌 영어 수업 핵심 포인트</h3>
+            <p style="font-size: 16px; color: #64748b; margin: 0; text-align: center;">
+                <strong style="color: #2563EB;">매일매일 꾸준한 숙제!</strong><br>
+                <span style="background: linear-gradient(135deg, #3B82F6 0%, #6366F1 100%); color: white; padding: 3px 8px; border-radius: 4px; font-weight: bold;">체계적인 학습</span>으로<br>
+                영어 실력 쑥쑥 향상시켜보아요! 🎯
+            </p>
+        </div>
+
+        <h2>📖 영어 숙제량 안내</h2>
+        
+        <div class="time-box">
+            📅 월화 2일 분량 / 수목 4일 분량 📅
+        </div>
+
+        <div class="process-grid">
+            <div class="homework-card">
+                <h3>📚 독해 숙제</h3>
+                <p><strong>본책:</strong> 단어 뜻 · 발음 · 문제 풀기 · 근거 표시</p>
+                <p><strong>워크북:</strong> 주동 표시 · 한글 해석 · 문제 풀기 · 채점</p>
+            </div>
+            
+            <div class="homework-card">
+                <h3>📝 구문 숙제</h3>
+                <p><strong>본책:</strong> 문장 성분 표시 · 해석</p>
+                <p><strong>워크북:</strong> 정확한 해석 · 구문 개념지</p>
+            </div>
+            
+            <div class="homework-card">
+                <h3>📋 문법 숙제</h3>
+                <p><strong>본책·워크북:</strong> 문제 풀기 · 근거 표시 · 채점 · 오답 정리</p>
+                <p><strong>추가:</strong> 문법 개념지</p>
+            </div>
+        </div>
+
+        <h2>📊 영어 수업 흐름</h2>
+
+        <div class="flow-grid">
+            <div class="flow-card">
+                <div class="step-title">1단계</div>
+                <h3>📋 숙제 검사</h3>
+                <p>본수업</p>
+            </div>
+            
+            <div class="flow-card">
+                <div class="step-title">2단계</div>
+                <h3>📚 독해·구문</h3>
+                <p>본수업</p>
+            </div>
+            
+            <div class="flow-card">
+                <div class="step-title">3단계</div>
+                <h3>📝 문법</h3>
+                <p>본수업</p>
+            </div>
+            
+            <div class="flow-card">
+                <div class="step-title">4단계</div>
+                <h3>📖 단어 시험</h3>
+                <p>튜터링 · 50분 준수<br>
+                (8:20 수업은 수업 전 튜터링)</p>
+            </div>
+            
+            <div class="flow-card">
+                <div class="step-title">5단계</div>
+                <h3>🏠 자기 주도 학습</h3>
+                <p>가정 내 · 듣기 포함<br>
+                → 다음날 밤 12시까지<br>
+                단톡 숙제 인증</p>
+            </div>
+        </div>
+
+        <div class="notice-box">
+            <p><strong>💡 참고:</strong> 각 반의 수업 흐름은 매 수업 현장에 따라 유연하게 변경될 수 있습니다.</p>
+        </div>
+
+        <h2>📋 영어 수업 기본 규칙</h2>
+
+        <div class="process-grid">
+            <div class="process-card">
+                <div class="title-row">
+                    <span class="step-number">📏</span>
+                    <strong>도장 시스템</strong>
+                </div>
+                <p>매 숙제 검사 시:<br>
+                <span class="highlight-text">날짜 도장</span> (GOOD) · 
+                <span class="highlight-text">기타 도장</span> (미흡·안함)</p>
+            </div>
+            
+            <div class="process-card">
+                <div class="title-row">
+                    <span class="step-number">📊</span>
+                    <strong>일일 평가표</strong>
+                </div>
+                <p>출결 · 숙제 · 참여도 · 숙제 인증<br>
+                → 매달 학습 보고서 학부모님 발송<br>
+                → 학생 배부</p>
+            </div>
+            
+            <div class="process-card">
+                <div class="title-row">
+                    <span class="step-number">🖊️</span>
+                    <strong>필기 도구 구분</strong>
+                </div>
+                <p>수업 시간: <span class="highlight-text">색깔펜</span><br>
+                숙제: <span class="highlight-text">연필</span></p>
+            </div>
+            
+            <div class="process-card">
+                <div class="title-row">
+                    <span class="step-number">💤</span>
+                    <strong>졸음 해결법</strong>
+                </div>
+                <p>세수 · 물 마시기 · 박하사탕 · <span class="highlight-text">개인 사유 사전 고지</span></p>
+            </div>
+            
+            <div class="process-card">
+                <div class="title-row">
+                    <span class="step-number">📱</span>
+                    <strong>숙제 인증</strong>
+                </div>
+                <p><span class="highlight-text">다음날 밤 12시까지</span> 단톡 숙제 인증 필수</p>
+            </div>
+            
+            <div class="process-card">
+                <div class="title-row">
+                    <span class="step-number">✅</span>
+                    <strong>근거 표시 & 오답 정리</strong>
+                </div>
+                <p>독해 · 구문 · 문법 수업 · 주간 테스트<br>
+                <span class="highlight-text">채원T표 근거 표시 · 오답 정리 필수</span></p>
+            </div>
+        </div>
+
+        <div class="important-notice">
+            <h3>💖 채원T의 응원 메시지</h3>
+            <p style="font-size: 16px; color: #64748b; margin: 0; text-align: center;">
+                <strong style="color: #2563EB;">체계적인 학습 계획</strong>으로<br>
+                여러분의 <strong style="color: #2563EB;">영어 실력 향상</strong>을 도해드리겠습니다! 🌟<br>
+                매일 조금씩, <strong style="color: #2563EB;">꾸준히</strong> 함께 해보아요! 💪
+            </p>
+        </div>
+
+        <div class="signature">
+            대치프라임 채원T
+        </div>
+
+    </div>
+
+</body>
+</html>
